@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="clock" id="clock">
+            <div class="number">
+                <div class="num"><b>12</b></div>
+            </div>
+            <!-- <div class="num">
+                <span style="--i:1;" class="num1"><b>1</b></span>
+                <span style="--i:2;" class="num1"><b>2</b></span>
+                <span style="--i:3;" class="num1"><b>3</b></span>
+                <span style="--i:4;" class="num1"><b>4</b></span>
+                <span style="--i:5;" class="num1"><b>5</b></span>
+                <span style="--i:6;" class="num1"><b>6</b></span>
+                <span style="--i:7;" class="num1"><b>7</b></span>
+                <span style="--i:8;" class="num1"><b>8</b></span>
+                <span style="--i:9;" class="num1"><b>9</b></span>
+                <span style="--i:10;" class="num1"><b>10</b></span>
+                <span style="--i:11;" class="num1"><b>11</b></span>
+                <span style="--i:12;" class="num1"><b>12</b></span>
+            </div> -->
+
+            <div class="center"></div>
+            <div class="hourHand"></div>
+            <div class="minHand"></div>
+            <div class="secHand"></div>
+            <div class="lines"></div>
+            <div class="lines2"></div>
+        </div>
+        <br>
+        <div>
+                <label for="hour">Hour:</label>
+                <input type="number" name="" id="hour" min="1" max="12">
+                <label for="minute">Minute:</label>
+                <input type="number" name="" id="minute" min="1" max="60">
+                <label for="seconds">Seconds:</label>
+                <input type="number" name="" id="seconds" min="1" max="60">
+                <input type="submit" name="" id="submit">
+            <br>
+            <br>
+            <center><input type="button" id="cancel" value="Cancel"></center>
+        </div>
+        <br>
+        <div class="button">
+            <button class="btn" id="btn">Generate Time</button>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
