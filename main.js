@@ -13,8 +13,10 @@ for (let i = 1; i < 60; i++) {
 
 for (let i = 1; i < 12; i++) {
 
-  clock.innerHTML = clock.innerHTML + "<div class='num'><b>" + i + "</b></div>";
-  number1[i].style.transform = "rotate(" + 30 * i + "deg)"
+  clock.innerHTML = clock.innerHTML + `<div class='num' ><b id='num${i}'>` + i + "</b></div>";
+  number1[i].style.transform = "rotate(" + 30 * i + "deg)";
+  var curN = document.getElementById(`num${i}`);
+  curN.style.transform = "rotate(" + (-30 * i) + "deg)";
 }
 
 for (let i = 1; i < 12; i++) {
@@ -34,9 +36,9 @@ const secInt = document.getElementById("seconds");
 const submit = document.getElementById("submit");
 const cancel = document.getElementById("cancel");
 
-function disable(){
-  submit.disabled=true;
-  cancel.disabled=true;
+function disable() {
+  submit.disabled = true;
+  cancel.disabled = true;
 }
 disable();
 
@@ -46,60 +48,57 @@ function changeTime() {
   let h = Math.floor(Math.random() * 12);
 
   let second = s * 6;
-  let minute = m * 6;
-  let hour = ((h * 60) + minute) * 0.5;
+  let minute = ((m * 60) + s) * 0.1;
+  let hour = ((h * 60) + m) * 0.5;
 
   hourHand.style.transform = `rotate(${hour + 90}deg)`;
   minHand.style.transform = `rotate(${minute + 90}deg)`;
   secHand.style.transform = `rotate(${second + 90}deg)`;
-  // ${value=90} because, in css I used the transform value 
-  // -90 deg to set postion to 12 so
+  // value + 90 deg because, the div original postion is transformed '90' degree to achieve orgin at 12'o clock in css
+
 }
 
 
 btn.addEventListener("click", changeTime)
 
-function changeTime2(){
+function changeTime2() {
 
-  let h1 = hourInt.value;
-  let m1 = minInt.value;
-  let s1 = secInt.value;
+  let h1 = parseInt(hourInt.value);
+  let m1 = parseInt(minInt.value);
+  let s1 = parseInt(secInt.value);
 
   let second2 = s1 * 6;
-  let minute2 = m1 * 6;
-  let hour2 = ((h1 * 60) + minute2) * 0.5;
+  let minute2 = ((m1 * 60) + s1) * 0.1;
+  let hour2 = ((h1 * 60) + m1) * 0.5;
 
   hourHand.style.transform = `rotate(${hour2 + 90}deg)`;
   minHand.style.transform = `rotate(${minute2 + 90}deg)`;
   secHand.style.transform = `rotate(${second2 + 90}deg)`;
-  
-  hourInt.value = "";
-  minInt.value = "";
-  secInt.value = "";
-  
+
 }
 
-hourInt.addEventListener("change", ()=>{
-  submit.disabled=false;
-  cancel.disabled= false;
+hourInt.addEventListener("change", () => {
+  submit.disabled = false;
+  cancel.disabled = false;
 })
-minInt.addEventListener("change", ()=>{
-  submit.disabled=false;
-  cancel.disabled= false;
+minInt.addEventListener("change", () => {
+  submit.disabled = false;
+  cancel.disabled = false;
 })
-secInt.addEventListener("change", ()=>{
-  submit.disabled=false;
-  cancel.disabled= false;
+secInt.addEventListener("change", () => {
+  submit.disabled = false;
+  cancel.disabled = false;
 })
 
-submit.addEventListener("click", ()=>{
+submit.addEventListener("click", () => {
   changeTime2();
-  disable();
+  submit.disabled = true;
 })
 
 cancel.addEventListener("click", () => {
-  hourInt.value = "";
-  minInt.value = "";
-  secInt.value = "";
+  hourInt.value = "0";
+  minInt.value = "0";
+  secInt.value = "0";
+  changeTime2();
   disable();
 })

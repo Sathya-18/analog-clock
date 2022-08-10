@@ -1,3 +1,6 @@
+*{
+    transition: 0.5s;
+}
 body {
     padding: 0px;
     margin: 0px;
@@ -60,6 +63,45 @@ body {
     width: 40%;
 }
 
+/* .hourHand,
+.minHand,
+.secHand {
+    width: 6px;
+    left: 147px;
+    height: 300px;
+    position: absolute;
+    border-radius: 6px;
+
+}
+
+.hourHand .hr {
+    width: 6px;
+    left: 147px;
+    background-color: yellow;
+    height: 70px;
+    width: 6px;
+    margin-top: 80px;
+    z-index: 2;
+}
+
+.minHand .mn {
+    width: 4px;
+    left: 148px;
+    background-color: yellowgreen;
+    height: 90px;
+    width: 6px;
+    margin-top: 60px;
+
+}
+
+.secHand .sc {
+    width: 2px;
+    left: 149px;
+    background-color: teal;
+    height: 110px;
+    margin-top: 40px;
+} */
+
 /* .num1{
     position: absolute;
     inset: 20px;
@@ -71,15 +113,16 @@ body {
     transform: rotate(calc(-30deg*var(--i)));
 } */
 
-.num{
+.num {
     position: absolute;
-    margin-left: -1px;
+    /* margin-left: -1px; */
     color: black;
     left: 50%;
     transform-origin: 50% 150px;
     text-align: center;
-    margin-left: 0px;
+    margin-left: -4px;
 }
+
 .num b {
     position: absolute;
     color: black;
@@ -88,11 +131,11 @@ body {
     width: 0px;
     background-color: black;
     margin-top: 15px;
-    margin-left: -5px;
+    margin-left: 0px;
 
 }
 
-.lines{
+.lines {
     position: absolute;
     width: 2px;
     height: 6px;
@@ -101,7 +144,8 @@ body {
     margin-left: 0px;
     transform-origin: 50% 150px;
 }
-.lines2{
+
+.lines2 {
     position: absolute;
     width: 6px;
     height: 15px;
@@ -110,4 +154,3 @@ body {
     margin-left: -3px;
     transform-origin: 50% 150px;
 }
-
