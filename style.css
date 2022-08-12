@@ -14,7 +14,7 @@ body {
     height: 100vh;
 }
 
-.clock {
+#clock {
     min-width: 300px;
     min-height: 300px;
     border: 10px solid black;
@@ -49,7 +49,6 @@ body {
     border-radius: 6px;
     transform-origin: 100%;
     transform: rotate(90deg);
-
 }
 .hourHand{
     width: 30%;
@@ -116,7 +115,6 @@ body {
 .num {
     position: absolute;
     /* margin-left: -1px; */
-    color: black;
     left: 50%;
     transform-origin: 50% 150px;
     text-align: center;
@@ -127,11 +125,8 @@ body {
     position: absolute;
     color: black;
     left: 50%;
-    text-align: center;
     width: 0px;
-    background-color: black;
     margin-top: 15px;
-    margin-left: 0px;
 
 }
 
@@ -141,7 +136,7 @@ body {
     height: 6px;
     background-color: black;
     left: 50%;
-    margin-left: 0px;
+    /* margin-left: 0px; */
     transform-origin: 50% 150px;
 }
 
@@ -154,3 +149,43 @@ body {
     margin-left: -3px;
     transform-origin: 50% 150px;
 }
+div #submit{
+    width: 100px;
+    height: 30px;
+    background-color: teal;
+    border-radius: 10px;
+    border: none;
+}
+div #cancel{
+    width: 100px;
+    height: 30px;
+    background-color: teal;
+    border-radius: 10px;
+    border: none;
+}
+div #submit:hover{
+    background-color: rgb(1, 167, 167);
+    color: black;
+}
+div #cancel:hover{
+    background-color: rgb(1, 167, 167);
+    color: black;
+}
+div #submit:active{
+    background-color: rgb(1, 167, 76);
+    color: white;
+    font-weight: bolder;
+}
+div #cancel:active{
+    background-color: rgb(1, 167, 76);
+    color: white;
+    font-weight: bolder;
+}
+div input:in-range{
+    border: 2px solid yellow;
+}
+div + label {
+    font-weight: bold;
+    font-family: cursive;
+}
+

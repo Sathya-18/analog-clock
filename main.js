@@ -13,7 +13,7 @@ for (let i = 1; i < 60; i++) {
 
 for (let i = 1; i < 12; i++) {
 
-  clock.innerHTML = clock.innerHTML + `<div class='num' ><b id='num${i}'>` + i + "</b></div>";
+  clock.innerHTML = clock.innerHTML + `<div class='num'><b id='num${i}'>` + i + "</b></div>";
   number1[i].style.transform = "rotate(" + 30 * i + "deg)";
   var curN = document.getElementById(`num${i}`);
   curN.style.transform = "rotate(" + (-30 * i) + "deg)";
